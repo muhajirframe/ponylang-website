@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="pt5">
+  <h1 class="pl6 f-subheadline">
+    {{ .Title }}
+  </h1>
+  <div class="bg-light-gray pb4 pt3">
+  {{$author := getJSON "/data/author/" .Params.author ".json" }}
+    <div class="flex pl6">
+        <div class="flex flex-column justify-center">
+            <div class="h3 w3 bg-red br-100 cover" style="background: url(/avatars/{{ $author.avatar }})">
+            </div>
+        </div>
+        <div class="ph5">
+            <h3 >{{ $author.name }}</h3>
+            <h4 class="fw3">{{ $author.bio | markdownify }}</h4>
+        </div>
+    </div>
+  
+    <div class="pl7">
+        Monday, September 18, 2017
+    </div>
+  
+  </div>
+  <div class="ph7 lh-copy pt4">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

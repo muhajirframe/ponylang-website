@@ -1,3 +1,16 @@
-{{ partial "header" . }}
-<h1>cihuy</h1>
-{{ partial "footer" . }}
+{{ define "main" }}
+<main>
+  <div class="pl6">
+    <h1 class="f-subheadline">{{ .Title }}</h1>
+  </div>
+  <ul class="ph7 list">
+    {{ range .Data.Pages }}
+    <li>
+      <div class="f4 lh-copy">
+        <p>{{.Content}}</p>
+      </div>
+    </li>
+    {{ end}}
+  </ul>
+</main>
+{{ end }}

@@ -1,3 +1,17 @@
+# ponylang.github.io
+
+Source content for the Pony website. You can see the final product at http://www.ponylang.org/.
+
+# Interested in contributing?
+
+Please see our contributing guidelines
+
+Interacting with the community
+
+Please make sure to read our code of conduct.
+
+This website was made with Victor Hugo Template
+
 # Victor Hugo
 
 **A [Hugo](https://gohugo.io/) boilerplate for creating truly epic websites**

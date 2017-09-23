@@ -1,0 +1,16 @@
+html {
+  font-family: 'Roboto';
+  color: #323156;
+}
+
+.cg {
+   color: #219f73;
+}
+
+nav {
+  box-sizing: border-box;
+}
+a {
+  color: #219f73;
+  text-decoration: none;
+}

@@ -1,4 +1,15 @@
-{{ partial "header" . }}
-{{ partial "intro" . }}
-
-{{ partial "footer" . }}
+{{ define "main" }}
+<div class="flex justify-center pv5">
+  <img class="h5" src="https://pbs.twimg.com/profile_images/731128040722448385/bfJViQts_400x400.jpg" alt="Ponylang logo">
+</div>
+<h1 class="f1 tc">{{ .Title }}</h1>
+<h2 class="f3 tc code">{{ .Data.tagline }} </h2>
+<div class="flex justify-center">
+  <a href="/learn">LEARN</a>
+  <a href="/discover">FEATURES</a>
+  <a href="install">INSTALL</a>
+</div>
+<div class="ph7 lh-copy">
+  {{ .Content }}
+</div>
+{{ end }}

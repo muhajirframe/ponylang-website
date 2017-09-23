@@ -1,0 +1,12 @@
+{{ $author_file := printf "/data/author/%s.json" .Params.author }}
+{{ $author_json := getJSON $author_file }}
+<div class="flex pl6">
+    <div class="flex flex-column justify-center">
+        <div class="h3 w3 bg-red br-100" style="background: url(/avatars/{{ $author_json.avatar }})">
+        </div>
+    </div>
+    <div>
+        <h3 class="pl5">{{ $author_json.name }}</h3>
+        <h4 class="pl5 fw3">{{ $author_json.bio | markdownify }}</h4>
+    </div>
+</div>

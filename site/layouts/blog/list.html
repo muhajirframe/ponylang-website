@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main>
+  <header class="pl6">
+    <h1 class="f-subheadline">{{ .Title }}</h1>
+  </header>
+  <ul class="ph7 list">
+    {{ range .Data.Pages }}
+    <li>
+      <a class="f2 lh-solid" href="{{.Permalink}}">
+        <h2>{{.Title}}</h2>
+      </a>
+      <div class="f3">{{ .Date.Format "Monday, Jan 2, 2006"}}</div>
+      <div class="f3 lh-copy">
+        <p>{{.Summary}}</p>
+      </div>
+    </li>
+    {{ end}}
+  </ul>
+</main>
+{{ end }}
